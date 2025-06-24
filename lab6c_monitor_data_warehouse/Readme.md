@@ -1,0 +1,1 @@
+This is an auto-created file for lab6c_monitor_data_warehouse
