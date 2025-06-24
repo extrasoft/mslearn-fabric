@@ -1,0 +1,1 @@
+This is an auto-created file for lab12_query_data_in_kql_database
