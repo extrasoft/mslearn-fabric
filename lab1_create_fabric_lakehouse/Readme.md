@@ -1,0 +1,1 @@
+This is an auto-created file for lab1_create_fabric_lakehouse
