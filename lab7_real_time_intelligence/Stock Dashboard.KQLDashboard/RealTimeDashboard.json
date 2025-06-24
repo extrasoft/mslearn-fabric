@@ -1,0 +1,99 @@
+{
+  "schema_version": "60",
+  "tiles": [
+    {
+      "id": "a063a8be-7644-4df9-8b7f-b9959b4333f3",
+      "title": "Average Prices",
+      "visualType": "column",
+      "pageId": "37670586-f914-4f65-8848-46fd05c8746e",
+      "layout": {
+        "x": 0,
+        "y": 0,
+        "width": 9,
+        "height": 7
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "3d0d7917-10a6-434f-9796-d17eba012c7d"
+      },
+      "visualOptions": {
+        "multipleYAxes": {
+          "base": {
+            "id": "-1",
+            "label": "",
+            "columns": [],
+            "yAxisMaximumValue": null,
+            "yAxisMinimumValue": null,
+            "yAxisScale": "linear",
+            "horizontalLines": []
+          },
+          "additional": [],
+          "showMultiplePanels": false
+        },
+        "hideLegend": false,
+        "legendLocation": "bottom",
+        "xColumnTitle": "",
+        "xColumn": null,
+        "yColumns": null,
+        "seriesColumns": null,
+        "xAxisScale": "linear",
+        "verticalLine": "",
+        "crossFilter": [],
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "drillthrough": [],
+        "selectedDataOnLoad": {
+          "all": true,
+          "limit": 10
+        }
+      }
+    }
+  ],
+  "baseQueries": [],
+  "parameters": [
+    {
+      "kind": "duration",
+      "id": "7bbe262a-b4a2-482a-9900-2175e853f8f0",
+      "displayName": "Time range",
+      "description": "",
+      "beginVariableName": "_startTime",
+      "endVariableName": "_endTime",
+      "defaultValue": {
+        "kind": "dynamic",
+        "count": 1,
+        "unit": "hours"
+      },
+      "showOnPages": {
+        "kind": "all"
+      }
+    }
+  ],
+  "dataSources": [
+    {
+      "id": "9c7668d9-e5a4-428b-bd56-dcc081acf2e9",
+      "kind": "kusto-trident",
+      "scopeId": "kusto-trident",
+      "clusterUri": "",
+      "database": "71288c10-ce77-b3bb-4bbf-1b4722ea8a13",
+      "name": "lab7_eventhouse",
+      "workspace": "00000000-0000-0000-0000-000000000000"
+    }
+  ],
+  "pages": [
+    {
+      "name": "Page 1",
+      "id": "37670586-f914-4f65-8848-46fd05c8746e"
+    }
+  ],
+  "queries": [
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "9c7668d9-e5a4-428b-bd56-dcc081acf2e9"
+      },
+      "text": "stock\n| where [\"time\"] > ago(5m)\n| summarize avgPrice = avg(todecimal(bidPrice)) by symbol\n| project symbol, avgPrice",
+      "id": "3d0d7917-10a6-434f-9796-d17eba012c7d",
+      "usedVariables": []
+    }
+  ]
+}
