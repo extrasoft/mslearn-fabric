@@ -1,0 +1,1 @@
+This is an auto-created file for lab6a_data_warehouse_load
