@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "KQLQueryset",
+    "displayName": "lab13_eventhouse_queryset",
+    "description": "lab13_eventhouse_queryset"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "d1c83cd4-4582-8cf8-4bab-31a7daf0417f"
+  }
+}
