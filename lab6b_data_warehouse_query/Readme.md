@@ -1,0 +1,1 @@
+This is an auto-created file for lab6b_data_warehouse_query
