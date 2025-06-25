@@ -1,0 +1,1 @@
+This is an auto-created file for lab20_work_with_sql_database
