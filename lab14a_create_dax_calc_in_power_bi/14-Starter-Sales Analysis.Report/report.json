@@ -1,0 +1,63 @@
+{
+  "config": "{\"version\":\"5.51\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU02\",\"version\":\"5.53\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"slowDataSourceSettings\":{\"isCrossHighlightingDisabled\":false,\"isSlicerSelectionsButtonEnabled\":false,\"isFilterSelectionsButtonEnabled\":false,\"isFieldWellButtonEnabled\":false,\"isApplyAllButtonEnabled\":false},\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true,\"useEnhancedTooltips\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU02",
+            "path": "BaseThemes/CY24SU02.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Page 2",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "20d698a8a400d8d628a3",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"6d7b8ff112ab3cba4ec0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":9.936622494465839,\"y\":0,\"z\":0,\"width\":1270.2315755425498,\"height\":720.4051308487734,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Rows\":[{\"queryRef\":\"Date.Year\",\"active\":true},{\"queryRef\":\"Date.Month\",\"active\":true}],\"Values\":[{\"queryRef\":\"Sales.Avg Price\"},{\"queryRef\":\"Sales.Median Price\"},{\"queryRef\":\"Sales.Min Price\"},{\"queryRef\":\"Sales.Max Price\"},{\"queryRef\":\"Sales.Orders\"},{\"queryRef\":\"Sales.Order Lines\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Date\",\"Type\":0},{\"Name\":\"s\",\"Entity\":\"Sales\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Year\"},\"Name\":\"Date.Year\",\"NativeReferenceName\":\"Year\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Month\"},\"Name\":\"Date.Month\",\"NativeReferenceName\":\"Month\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Avg Price\"},\"Name\":\"Sales.Avg Price\",\"NativeReferenceName\":\"Avg Price\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Median Price\"},\"Name\":\"Sales.Median Price\",\"NativeReferenceName\":\"Median Price\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Min Price\"},\"Name\":\"Sales.Min Price\",\"NativeReferenceName\":\"Min Price\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Max Price\"},\"Name\":\"Sales.Max Price\",\"NativeReferenceName\":\"Max Price\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Orders\"},\"Name\":\"Sales.Orders\",\"NativeReferenceName\":\"Orders\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Order Lines\"},\"Name\":\"Sales.Order Lines\",\"NativeReferenceName\":\"Order Lines\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Year\"}}},{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Month\"}}}]},\"expansionStates\":[{\"roles\":[\"Rows\"],\"levels\":[{\"queryRefs\":[\"Date.Year\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Date\"}},\"Property\":\"Year\"}}],\"isPinned\":true},{\"queryRefs\":[\"Date.Month\"],\"isCollapsed\":true,\"isPinned\":true}],\"root\":{\"identityValues\":null,\"children\":[{\"identityValues\":[{\"Literal\":{\"Value\":\"'FY2018'\"}}],\"isToggled\":true}]}}],\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 720.41,
+          "width": 1270.23,
+          "x": 9.94,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"f7154a23dcc310f7c985\",\"layouts\":[{\"id\":0,\"position\":{\"x\":194.59219051662268,\"y\":228.5423173727143,\"z\":1000,\"width\":584.6046234244069,\"height\":443.8358047528075}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Salesperson.Salesperson\"},{\"queryRef\":\"Sum(Sales.Sales)\"},{\"queryRef\":\"Targets.Target\"},{\"queryRef\":\"Targets.Variance\"},{\"queryRef\":\"Targets.Variance Margin\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"Salesperson (Performance)\",\"Type\":0},{\"Name\":\"s1\",\"Entity\":\"Sales\",\"Type\":0},{\"Name\":\"t\",\"Entity\":\"Targets\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Salesperson\"},\"Name\":\"Salesperson.Salesperson\",\"NativeReferenceName\":\"Salesperson\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s1\"}},\"Property\":\"Sales\"}},\"Function\":0},\"Name\":\"Sum(Sales.Sales)\",\"NativeReferenceName\":\"Sales\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Target\"},\"Name\":\"Targets.Target\",\"NativeReferenceName\":\"Target\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Variance\"},\"Name\":\"Targets.Variance\",\"NativeReferenceName\":\"Variance\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Variance Margin\"},\"Name\":\"Targets.Variance Margin\",\"NativeReferenceName\":\"Variance Margin\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Salesperson\"}}}]},\"columnProperties\":{\"Sum(Sales.Sales)\":{\"displayName\":\"Sales\"}},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 443.84,
+          "width": 584.60,
+          "x": 194.59,
+          "y": 228.54,
+          "z": 1000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}
