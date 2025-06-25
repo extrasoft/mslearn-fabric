@@ -1,0 +1,1 @@
+This is an auto-created file for lab18_monitor_activity_in_monitor_hub
