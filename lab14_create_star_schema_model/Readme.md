@@ -1,0 +1,1 @@
+This is an auto-created file for lab14_create_star_schema_model
