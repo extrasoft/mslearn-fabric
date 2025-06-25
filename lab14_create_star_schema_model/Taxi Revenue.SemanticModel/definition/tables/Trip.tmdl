@@ -1,0 +1,268 @@
+table Trip
+	lineageTag: 115ef2bf-eef9-4d4c-8a0a-d50093d076c8
+	sourceLineageTag: [dbo].[Trip]
+
+	column DateID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 868c15cf-4de2-4eba-8579-6305b4814147
+		sourceLineageTag: DateID
+		summarizeBy: none
+		sourceColumn: DateID
+
+		annotation SummarizationSetBy = Automatic
+
+	column MedallionID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 4c5890ed-d83f-41e1-a5f0-e9e34cd0e54c
+		sourceLineageTag: MedallionID
+		summarizeBy: count
+		sourceColumn: MedallionID
+
+		annotation SummarizationSetBy = Automatic
+
+	column HackneyLicenseID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 4f6dd9c8-95a4-425f-a1c8-bc61205cc61c
+		sourceLineageTag: HackneyLicenseID
+		summarizeBy: count
+		sourceColumn: HackneyLicenseID
+
+		annotation SummarizationSetBy = Automatic
+
+	column PickupTimeID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 8d19276e-9489-4024-b098-a4c2ccb4007d
+		sourceLineageTag: PickupTimeID
+		summarizeBy: count
+		sourceColumn: PickupTimeID
+
+		annotation SummarizationSetBy = Automatic
+
+	column DropoffTimeID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: ded344bc-a34a-41a4-aab8-94f4a46453b8
+		sourceLineageTag: DropoffTimeID
+		summarizeBy: count
+		sourceColumn: DropoffTimeID
+
+		annotation SummarizationSetBy = Automatic
+
+	column PickupGeographyID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 2caf347a-8466-453d-818f-240c35780d4a
+		sourceLineageTag: PickupGeographyID
+		summarizeBy: count
+		sourceColumn: PickupGeographyID
+
+		annotation SummarizationSetBy = Automatic
+
+	column DropoffGeographyID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 1d65c51b-31a5-4b7f-94ef-d14e087d6fd6
+		sourceLineageTag: DropoffGeographyID
+		summarizeBy: none
+		sourceColumn: DropoffGeographyID
+
+		annotation SummarizationSetBy = Automatic
+
+	column PickupLatitude
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 8a138376-7e78-4004-a64d-6a8ff6c0aeb2
+		sourceLineageTag: PickupLatitude
+		summarizeBy: sum
+		sourceColumn: PickupLatitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PickupLongitude
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 5119470d-50ac-4300-8aa6-4245ab0bfcbe
+		sourceLineageTag: PickupLongitude
+		summarizeBy: sum
+		sourceColumn: PickupLongitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PickupLatLong
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: 0f0a4cd5-3ba9-48b0-9dd1-d761c8ae4f7b
+		sourceLineageTag: PickupLatLong
+		summarizeBy: none
+		sourceColumn: PickupLatLong
+
+		annotation SummarizationSetBy = Automatic
+
+	column DropoffLatitude
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 97ae4f06-65b2-4817-adfc-ba241ace89f2
+		sourceLineageTag: DropoffLatitude
+		summarizeBy: sum
+		sourceColumn: DropoffLatitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column DropoffLongitude
+		dataType: double
+		sourceProviderType: float
+		lineageTag: b9abd18f-78ab-48c5-8cb1-12ca2c9f9e23
+		sourceLineageTag: DropoffLongitude
+		summarizeBy: sum
+		sourceColumn: DropoffLongitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column DropoffLatLong
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: 772b7b95-fcb8-4d34-8332-c868f6c1cdd2
+		sourceLineageTag: DropoffLatLong
+		summarizeBy: none
+		sourceColumn: DropoffLatLong
+
+		annotation SummarizationSetBy = Automatic
+
+	column PassengerCount
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 323973eb-2fe5-4698-8938-bcc978bcd2df
+		sourceLineageTag: PassengerCount
+		summarizeBy: sum
+		sourceColumn: PassengerCount
+
+		annotation SummarizationSetBy = Automatic
+
+	column TripDurationSeconds
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: fd638ddd-bee2-4f91-8768-65824aee10d6
+		sourceLineageTag: TripDurationSeconds
+		summarizeBy: sum
+		sourceColumn: TripDurationSeconds
+
+		annotation SummarizationSetBy = Automatic
+
+	column TripDistanceMiles
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 8f001f1a-b714-46f0-b6ad-2edabcde0d2f
+		sourceLineageTag: TripDistanceMiles
+		summarizeBy: sum
+		sourceColumn: TripDistanceMiles
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PaymentType
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: a6bdb890-1d5c-4c24-badb-7e97fc717add
+		sourceLineageTag: PaymentType
+		summarizeBy: none
+		sourceColumn: PaymentType
+
+		annotation SummarizationSetBy = Automatic
+
+	column FareAmount
+		dataType: int64
+		formatString: 0
+		sourceProviderType: decimal(18, 0)
+		lineageTag: cf93e5df-4042-4ba1-98fd-7e1ec3d1220e
+		sourceLineageTag: FareAmount
+		summarizeBy: sum
+		sourceColumn: FareAmount
+
+		annotation SummarizationSetBy = Automatic
+
+	column SurchargeAmount
+		dataType: int64
+		formatString: 0
+		sourceProviderType: decimal(18, 0)
+		lineageTag: 2c122016-7a53-4848-a058-9baf2042a5ea
+		sourceLineageTag: SurchargeAmount
+		summarizeBy: sum
+		sourceColumn: SurchargeAmount
+
+		annotation SummarizationSetBy = Automatic
+
+	column TaxAmount
+		dataType: int64
+		formatString: 0
+		sourceProviderType: decimal(18, 0)
+		lineageTag: 30cb57f2-22ce-430e-b8c8-56c4849772d2
+		sourceLineageTag: TaxAmount
+		summarizeBy: sum
+		sourceColumn: TaxAmount
+
+		annotation SummarizationSetBy = Automatic
+
+	column TipAmount
+		dataType: int64
+		formatString: 0
+		sourceProviderType: decimal(18, 0)
+		lineageTag: f4ce5ce3-0a6f-48c1-8a03-9ce4953a3797
+		sourceLineageTag: TipAmount
+		summarizeBy: sum
+		sourceColumn: TipAmount
+
+		annotation SummarizationSetBy = Automatic
+
+	column TollsAmount
+		dataType: int64
+		formatString: 0
+		sourceProviderType: decimal(18, 0)
+		lineageTag: b7d23eb7-e8e7-4b97-aa20-ff209b039f78
+		sourceLineageTag: TollsAmount
+		summarizeBy: sum
+		sourceColumn: TollsAmount
+
+		annotation SummarizationSetBy = Automatic
+
+	column TotalAmount
+		dataType: int64
+		formatString: 0
+		sourceProviderType: decimal(18, 0)
+		lineageTag: cc579e93-d324-4c56-b6ee-502e5ff9fdf7
+		sourceLineageTag: TotalAmount
+		summarizeBy: sum
+		sourceColumn: TotalAmount
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Trip = entity
+		mode: directLake
+		source
+			entityName: Trip
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

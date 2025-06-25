@@ -1,0 +1,12 @@
+relationship 9ed671b5-2194-5c32-510a-e4f2a019dcd9
+	fromColumn: Trip.DateID
+	toColumn: Date.DateID
+
+relationship 865cfe2a-16bb-31f5-fb7a-402cf0c85ad3
+	fromColumn: Trip.DropoffGeographyID
+	toColumn: Geography.GeographyID
+
+relationship f2555323-fe53-530e-f21d-6c7e32b64923
+	fromColumn: Trip.DropoffGeographyID
+	toColumn: Weather.GeographyID
+

@@ -1,0 +1,84 @@
+table Geography
+	lineageTag: 9142d8a8-5f62-4c53-a010-242662d268c3
+	sourceLineageTag: [dbo].[Geography]
+
+	column GeographyID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: e6b94bc9-5c87-4631-ac60-b8f4d781376e
+		sourceLineageTag: GeographyID
+		summarizeBy: none
+		sourceColumn: GeographyID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ZipCodeBKey
+		dataType: string
+		sourceProviderType: varchar(10)
+		lineageTag: 8107219c-1ec3-4349-b944-55a8d59661b3
+		sourceLineageTag: ZipCodeBKey
+		summarizeBy: none
+		sourceColumn: ZipCodeBKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column County
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: d9e99851-436a-41a6-a779-85e7c055e6d9
+		sourceLineageTag: County
+		summarizeBy: none
+		sourceColumn: County
+
+		annotation SummarizationSetBy = Automatic
+
+	column City
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: ab664f13-10f2-47a7-9407-312e9bf154a3
+		sourceLineageTag: City
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = Automatic
+
+	column State
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: c2968629-995b-4973-977d-8353aa628025
+		sourceLineageTag: State
+		summarizeBy: none
+		sourceColumn: State
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: 2cd74d28-0fa8-425e-b2fa-4003abdc38b2
+		sourceLineageTag: Country
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column ZipCode
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: dbd324f2-95a0-4954-bad8-efe9c20969f4
+		sourceLineageTag: ZipCode
+		summarizeBy: none
+		sourceColumn: ZipCode
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Geography = entity
+		mode: directLake
+		source
+			entityName: Geography
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+
