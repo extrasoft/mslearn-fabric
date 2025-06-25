@@ -1,0 +1,44 @@
+table 'Time Calculations'
+	lineageTag: 659c7ccf-f67b-4da8-8c6c-953e1dab631a
+
+	calculationGroup
+
+		calculationItem 'Year-to-Date (YTD)' = CALCULATE(SELECTEDMEASURE(), DATESYTD('Date'[Date]))
+
+		calculationItem 'Previous Year (PY)' = CALCULATE(SELECTEDMEASURE(), PREVIOUSYEAR('Date'[Date]))
+
+			formatStringDefinition = "$#,##0"
+
+		calculationItem 'Year-over-Year (YoY) Growth' =
+				
+				VAR MeasurePriorYear =
+				    CALCULATE(
+				        SELECTEDMEASURE(),
+				        SAMEPERIODLASTYEAR('Date'[Date])
+				    )
+				RETURN
+				    DIVIDE(
+				        (SELECTEDMEASURE() - MeasurePriorYear),
+				        MeasurePriorYear
+				    )
+
+			formatStringDefinition = "0.##%"
+
+	column 'Yearly Calculations'
+		dataType: string
+		lineageTag: c5de6424-e46f-4acf-984b-18d83148632e
+		summarizeBy: none
+		sourceColumn: Name
+		sortByColumn: Ordinal
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ordinal
+		dataType: int64
+		formatString: 0
+		lineageTag: bb50f905-b89a-4491-b152-00a7ab93f306
+		summarizeBy: sum
+		sourceColumn: Ordinal
+
+		annotation SummarizationSetBy = Automatic
+

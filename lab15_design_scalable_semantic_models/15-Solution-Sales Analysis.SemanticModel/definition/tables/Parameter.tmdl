@@ -1,0 +1,50 @@
+table Parameter
+	lineageTag: 0e679e26-40c8-45f7-8ebf-3ef3bdc4dae7
+
+	column Parameter
+		lineageTag: f05ce7a1-940f-47d3-9692-81e5c8df8782
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Parameter Order'
+
+		relatedColumnDetails
+			groupByColumn: 'Parameter Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Parameter Fields'
+		isHidden
+		lineageTag: a344c0cc-6984-4f63-bfaf-8a1bdbe61b50
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Parameter Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Parameter Order'
+		isHidden
+		formatString: 0
+		lineageTag: fa25bdbb-7c08-4802-bbb9-8eed956ed338
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Parameter = calculated
+		mode: import
+		source =
+				{
+				    ("Total Sales", NAMEOF('Sales'[Total Sales]), 0),
+				    ("Profit", NAMEOF('Sales'[Profit]), 1),
+				    ("Profit Margin", NAMEOF('Sales'[Profit Margin]), 2),
+				    ("Orders", NAMEOF('Sales'[Orders]), 3)
+				}
+
+	annotation PBI_Id = e3c7208037fc4c34a6bb5f7f3a0d8510
+

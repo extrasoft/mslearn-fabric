@@ -1,0 +1,51 @@
+table 'Sales Figures'
+	lineageTag: f49b836d-cbca-484c-b430-6d8bc2ab9ebf
+
+	column 'Sales Figures'
+		lineageTag: fabd3b04-56e7-4b13-8cdb-f7e776ed168a
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Sales Figures Order'
+
+		relatedColumnDetails
+			groupByColumn: 'Sales Figures Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sales Figures Fields'
+		isHidden
+		lineageTag: fa291e10-bae2-4f14-a166-54503a53ed4d
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Sales Figures Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sales Figures Order'
+		isHidden
+		formatString: 0
+		lineageTag: f87a3c8b-dad1-46a3-a032-d300704a20e1
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Sales Figures' = calculated
+		mode: import
+		source =
+				{
+				 ("Total Sales", NAMEOF('Sales'[Total Sales]), 0),
+				 ("Profit", NAMEOF('Sales'[Profit]), 1),
+				 ("Profit Margin", NAMEOF('Sales'[Profit Margin]), 2),
+				 ("Orders", NAMEOF('Sales'[Orders]), 3),
+				 ("Target", NAMEOF('Targets'[Target]), 4)
+				}
+
+	annotation PBI_Id = 5a66ac316e4249ba8587e2615f10a65e
+
