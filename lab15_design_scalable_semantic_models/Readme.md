@@ -1,0 +1,1 @@
+This is an auto-created file for lab15_design_scalable_semantic_models
