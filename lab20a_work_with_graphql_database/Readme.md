@@ -1,0 +1,1 @@
+This is an auto-created file for lab20a_work_with_graphql_database
